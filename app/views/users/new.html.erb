@@ -1,0 +1,24 @@
+<title>Sign Up for Whiteboard</title>
+
+<h1>Sign Up</h1>
+
+<div class = "row">
+  <div class = "span6 offset3">
+    <%= form_for (@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+      <%= f.label :screenname %>
+      <%= f.text_field :screenname %>
+      <br />
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <br />
+
+      <%= f.label :password %>
+      <%= f.password_field :password %><br />
+      <br />
+      <%= f.submit "Sign Me Up!", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

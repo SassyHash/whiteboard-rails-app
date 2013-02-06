@@ -1,0 +1,15 @@
+<title><%=@user.name%></title>
+<h1><%=@user.name%></h1>
+
+<br>
+
+<h3><%=@user.name%>has<%=pluralize(@user.posts.count, "scribbles") on the Whiteboard.%></h3>
+
+<br>
+
+<ul>
+  <% @user.posts.each do |post| %>
+    <li><%= post.title %><br>
+        <%= post.create_at %></li>
+  <% end %>
+</ul>

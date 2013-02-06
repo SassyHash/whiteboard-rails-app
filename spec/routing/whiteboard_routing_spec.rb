@@ -20,14 +20,14 @@ describe 'SessionController' do
 end
 
 describe 'PostsController' do
-  let(:post) {post.title = "example", post.id = 2 }
+  let(:post) {post.id = 2, post.title = "example"}
   describe "routing" do
     it "routes to show posts with the title in the url" do
-      get("/posts/example").should route_to("posts#show", :id => 2)
+      get("/posts/example").should route_to("posts#show", :title => "example")
     end
 
     it "routes to show posts with a case insensitive title in the url" do
-      get("/posts/Example").should route_to("posts#show", :id => 2)
+      get("/posts/Example").should route_to("posts#show", :title => "example")
     end
   end
 end

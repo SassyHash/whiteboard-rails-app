@@ -11,6 +11,7 @@ group :development, :test do
 end
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'guard-rspec'
   gem 'factory_girl_rails', '4.1.0'
 end
 
@@ -20,6 +21,7 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'bootstrap-sass', '~> 2.2.2.0'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 

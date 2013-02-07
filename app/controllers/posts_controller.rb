@@ -11,7 +11,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(params[:post])
+    @post = Post.new(params[:post])
+    if @post.save!
+      flash.now[:success]= 'New post on your whiteboard! Woohoo!'
+      redirect_to post_path(@post)
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -24,7 +30,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by_title(params[:post][:title])
+    p params
+    @post = Post.find(params[:id])
   end
 
   def destroy

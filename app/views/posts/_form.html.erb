@@ -1,15 +1,16 @@
 <%= form_for(@post) do |f| %>
   <div class = "field">
     <%= f.label :title %> <br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "span6" %>
   </div>
 
   <div class = "field">
     <%= f.label :body %> <br />
-    <%= f.text_field :body %>
+    <%= f.text_area :body, row: 5, class: "span6" %>
+
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Write On My Whiteboard"%>
   </div>
 <%end%>

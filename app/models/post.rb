@@ -7,7 +7,7 @@ class Post <ActiveRecord::Base
 
 
   def title_url
-    self.title.downcase
+    self.title.gsub(" ","-").downcase
   end
 
 end

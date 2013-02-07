@@ -5,3 +5,4 @@ FactoryGirl.define do
     password    "dumbpassword"
   end
 end
+

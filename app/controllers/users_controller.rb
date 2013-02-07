@@ -13,7 +13,6 @@ class UsersController < ApplicationController
         flash.now[:success]= 'Welcome to Whiteboard'
         redirect_to signin_path
     else
-        flash.now[:error] = "Email/ Screenname is taken"
         render 'new'
     end
   end

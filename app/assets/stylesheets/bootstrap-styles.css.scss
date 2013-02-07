@@ -49,9 +49,9 @@ $serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 $baseFontSize:          14px;
-$baseFontFamily:        $sansFontFamily;
+$baseFontFamily:        $serifFontFamily;
 $baseLineHeight:        20px;
-$altFontFamily:         $serifFontFamily;
+$altFontFamily:         $monoFontFamily;
 
 $headingsFontFamily:    inherit; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold;    // instead of browser default, bold
@@ -195,12 +195,12 @@ $navbarLinkBackgroundActive:      darken($navbarBackground, 5%);
 $navbarBrandColor:                $navbarLinkColor;
 
 // Inverted navbar
-$navbarInverseBackground:                #111111;
-$navbarInverseBackgroundHighlight:       #222222;
-$navbarInverseBorder:                    #252525;
+$navbarInverseBackground:                #3399ff;
+$navbarInverseBackgroundHighlight:       #3399ff;
+$navbarInverseBorder:                    #3399ff;
 
-$navbarInverseText:                      $grayLight;
-$navbarInverseLinkColor:                 $grayLight;
+$navbarInverseText:                      $grayLighter;
+$navbarInverseLinkColor:                 $grayLighter;
 $navbarInverseLinkColorHover:            $white;
 $navbarInverseLinkColorActive:           $navbarInverseLinkColorHover;
 $navbarInverseLinkBackgroundHover:       transparent;
@@ -235,11 +235,11 @@ $warningBackground:       #fcf8e3;
 $warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
 
 $errorText:               #b94a48;
-$errorBackground:         #f2dede;
+$errorBackground:         #ffa9a9;
 $errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
 
 $successText:             #468847;
-$successBackground:       #dff0d8;
+$successBackground:       #66cc99;
 $successBorder:           darken(adjust-hue($successBackground, -10), 5%);
 
 $infoText:                #3a87ad;

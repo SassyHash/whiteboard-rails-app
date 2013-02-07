@@ -12,7 +12,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-    if @post.save!
+    @post.user_id = session[:current_user_id]
+    if @post.save
       flash.now[:success]= 'New post on your whiteboard! Woohoo!'
       redirect_to post_path(@post)
     else
@@ -30,7 +31,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    p params
     @post = Post.find(params[:id])
   end
 

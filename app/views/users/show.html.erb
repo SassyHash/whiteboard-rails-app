@@ -11,7 +11,7 @@
 <ul>
   <% @user.posts.each do |post| %>
     <li><%= post.title %><br>
-        <%= post.create_at %></li>
+        <%= post.created_at %></li>
   <% end %>
 </ul>
 

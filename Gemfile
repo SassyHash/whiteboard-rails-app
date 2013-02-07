@@ -29,7 +29,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'better-errors'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'meta_request'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

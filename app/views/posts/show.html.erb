@@ -1,0 +1,5 @@
+<h2><%= @post.title %></h2>
+
+<p><%= @post.body %></p>
+
+<%= link_to("Back", user_path(User.find(@post.user_id))) %>
